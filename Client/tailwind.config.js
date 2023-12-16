@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         "ocr-a-extended": ["OCR A Extended"],
       },
+      dropShadow: {
+        xl: "0px 8px 8px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [],
