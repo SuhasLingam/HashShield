@@ -7,7 +7,7 @@ export default {
         "ocr-a-extended": ["OCR A Extended"],
       },
       dropShadow: {
-        xl: "0px 8px 8px rgba(0, 0, 0, 0.25)",
+        xl: "4px 4px 4px rgba(0, 0, 0, 0.450)",
       },
     },
   },
