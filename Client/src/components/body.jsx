@@ -7,15 +7,15 @@ const body = () => {
       <main>
         <div>
           {/** LOGO */}
-          <span className="absolute font-ocr-a-extended mt-12 ml-24 flex z-10 items-center justify-center h-screen font-bold text-white text-9xl">
+          <span className="absolute font-ocr-a-extended mt-12 ml-24 flex z-10 items-center justify-center bottom-20 font-bold text-white text-9xl">
             Hash <br />
             Shield
           </span>
 
           {/** BG */}
 
-          <div className="absolute space-y-6 cursor-pointer text-white p-40 font-ocr-a-extended text-xl  justify-between bg-[#171717] flex flex-col  items-center h-screen w-[65%] right-0">
-            <h3 className="text-4xl">
+          <div className="absolute space-y-6 cursor-pointer text-white p-40 font-ocr-a-extended text-xl justify-center bg-[#171717] flex flex-col items-center h-screen w-[65.5%] right-0 ">
+            <h3 className="text-4xl capitalize">
               Join over 1,000 satisfied clients who rely on Hacken's team of
               experts and innovative products to keep their crypto projects safe
               and secure.

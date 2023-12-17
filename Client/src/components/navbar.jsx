@@ -26,8 +26,8 @@ const Links = [
 function navbar() {
   return (
     <>
-      <nav>
-        <div className="bg-blue-500 shadow-xl flex flex-row items-center p-6">
+      <nav className=" sticky top-0 z-50">
+        <div className="bg-blue-500 shadow-xl flex flex-row  items-center p-6">
           {/** Logo */}
           <span className="font-ocr-a-extended text-3xl font-bold drop-shadow-xl ml-20 ">
             Hash Shield
