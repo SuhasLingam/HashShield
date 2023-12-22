@@ -14,16 +14,43 @@ const Links = [
     link: "/",
   },
   {
-    name: "More",
+    name: "Contact",
     link: "/",
   },
   {
-    name: "Contact",
+    name: "More",
     link: "/",
   },
 ];
 
 function navbar() {
+  const [address, setAddress] = useState();
+
+  const WalletConnect = async () => {
+    if (window.ethereum) {
+      console.log("Metamask Detected");
+
+      try {
+        const { ethereum } = window;
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+
+        console.log(accounts[0]);
+        setAddress(accounts[0]);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log("No Metamaask Detected");
+    }
+  };
+
+  const connectMeta = async () => {
+    if (typeof window.ethereum !== "undefined") {
+      WalletConnect();
+    }
+  };
   return (
     <>
       <nav className=" sticky top-0 z-50">
@@ -43,8 +70,13 @@ function navbar() {
               </li>
             ))}
           </ul>
-          <button className="p-3 mr-4 ml-auto border-black border-2 font-ocr-a-extended rounded-lg shadow-3xl inline-flex hover:bg-blue-300 ">
-            Connect Wallet
+          <button
+            onClick={connectMeta}
+            className="p-3 mr-4  ml-auto border-black border-2 font-ocr-a-extended rounded-lg shadow-3xl inline-flex hover:bg-blue-300 "
+          >
+            {address
+              ? address.slice(0, 4) + " .... " + address.slice(-5)
+              : "Connect Wallet"}
           </button>
         </div>
       </nav>
