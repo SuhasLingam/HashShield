@@ -45,6 +45,7 @@ function navbar() {
       console.log("No Metamaask Detected");
     }
   };
+  
 
   const connectMeta = async () => {
     if (typeof window.ethereum !== "undefined") {
